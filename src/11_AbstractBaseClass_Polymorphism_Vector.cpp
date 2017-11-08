@@ -25,11 +25,12 @@ int main()
 	vector<Liquid*> myVector;
 	populate(myVector);
 	identify(myVector);
-//	cleanup(myVector);			//comment this out and run Profiling Tools->Profile with Valgrind to see memory leaks
+	cleanup(myVector);			//comment this out and run Profiling Tools->Profile with Valgrind to see memory leaks
 }
 
 //stuff a bunch of oil and water into the vector
 //refered to by BASE CLASS pointer only
+//(I guess they do mix...snort...chortle)
 void populate(vector<Liquid*> &myVector)
 {
 	for (int i = 0; i < HOW_MANY; i++)
